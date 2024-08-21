@@ -1,0 +1,33 @@
+- Uso de Gap
+.navegacion {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+En este ejemplo gap agrega 2rem a cada elemento de la navegación
+
+========================================================================
+
+Anteriormente se utilizaba margin-right, sin embargo, también agregaba el margen al último elemento y se tenía que eliminar mediante :last-of-type
+
+.navegacion {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+
+/* Selecciona el último elemento */
+.navegacion__enlace:last-of-type {
+    margin-right: 0;
+}
